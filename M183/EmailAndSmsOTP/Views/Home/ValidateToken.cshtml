@@ -1,0 +1,14 @@
+﻿@model EmailAndSmsOTP.Models.TokenViewModel
+
+@{
+    ViewBag.Title = "ValidateToken";
+}
+
+<h2>ValidateToken</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(x => x.Token)<br />
+    @Html.TextBoxFor(x => x.Token)<br />
+    <input type="submit" value="Verify" />
+}

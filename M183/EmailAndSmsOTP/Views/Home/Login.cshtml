@@ -1,0 +1,15 @@
+﻿@model EmailAndSmsOTP.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(x => x.Username)<br />
+    @Html.TextBoxFor(x => x.Username)<br />
+    @Html.LabelFor(x => x.Password)<br />
+    @Html.PasswordFor(x => x.Password)<br />
+    <input type="submit" value="Login"/>
+}

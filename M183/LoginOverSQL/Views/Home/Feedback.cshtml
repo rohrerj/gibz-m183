@@ -1,0 +1,23 @@
+﻿@model List<string>
+@{
+    ViewBag.Title = "Feedback";
+}
+
+<h2>Feedback</h2>
+
+<div>
+    @foreach (string feedback in Model)
+    {
+        <p>@feedback</p>
+    }
+</div>
+@if (ViewBag.ReadOnly != true)
+{
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.TextBox("Feedback")
+            <input type="submit" value="Submit Feedback" />
+        }
+    </div>
+}

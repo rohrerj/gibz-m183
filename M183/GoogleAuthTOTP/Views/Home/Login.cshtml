@@ -1,0 +1,20 @@
+﻿@model GoogleAuthTOTP.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(x => x.Username)<br />
+    @Html.TextBoxFor(x => x.Username)<br />
+    @Html.LabelFor(x => x.Password)<br />
+    @Html.PasswordFor(x => x.Password)<br />
+    @Html.LabelFor(x => x.Token)<br />
+    @Html.TextBoxFor(x => x.Token)<br />
+    <input type="submit" value="Login" />
+}
+
+<br/>
+@ViewBag.Result

