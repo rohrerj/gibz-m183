@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginOverSQL", "LoginOverSQ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfMadeSessions", "SelfMadeSessions\SelfMadeSessions.csproj", "{11EAB91E-4EF2-4902-8B93-EC25180965D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging", "Logging\Logging.csproj", "{EDADAA2A-E617-4985-A6D0-169BB9B551B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{11EAB91E-4EF2-4902-8B93-EC25180965D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11EAB91E-4EF2-4902-8B93-EC25180965D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11EAB91E-4EF2-4902-8B93-EC25180965D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDADAA2A-E617-4985-A6D0-169BB9B551B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDADAA2A-E617-4985-A6D0-169BB9B551B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDADAA2A-E617-4985-A6D0-169BB9B551B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDADAA2A-E617-4985-A6D0-169BB9B551B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +98,7 @@ Global
 		{39E4C60C-E946-4382-8B97-7666369D8214} = {F7403151-B69A-49E9-A236-57767FD44849}
 		{030B6F67-A078-4B8B-B2A1-4196CA334C32} = {F7403151-B69A-49E9-A236-57767FD44849}
 		{11EAB91E-4EF2-4902-8B93-EC25180965D7} = {F7403151-B69A-49E9-A236-57767FD44849}
+		{EDADAA2A-E617-4985-A6D0-169BB9B551B8} = {F7403151-B69A-49E9-A236-57767FD44849}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {89F9EF34-42E6-4B82-AF9D-C775996F874F}

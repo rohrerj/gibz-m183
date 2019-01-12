@@ -1,0 +1,31 @@
+﻿@model Logging.Models.LogsViewModel
+@{
+    ViewBag.Title = "GetLogs";
+}
+
+<h2>GetLogs</h2>
+
+<div>
+    <table border="1">
+        <tr>
+            <th>DateTime</th>
+            <th>Action</th>
+            <th>IP</th>
+            <th>Result</th>
+            <th>Browser</th>
+            <th>Message</th>
+        </tr>
+
+        @foreach (var log in Model.Logs)
+        {
+            <tr>
+                <td>@log.creationDate</td>
+                <td>@log.action</td>
+                <td>@log.ip</td>
+                <td>@log.result</td>
+                <td>@log.browser</td>
+                <td>@log.message</td>
+            </tr>
+        }
+    </table>
+</div>
